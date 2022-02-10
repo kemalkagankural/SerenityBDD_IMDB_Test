@@ -24,7 +24,7 @@ src
 
 Serenity 2.2.13 introduced integration with WebdriverManager to download webdriver binaries.
 
-## The sample scenario
+## The first scenario
 Both variations of the sample project uses the sample Cucumber scenario. In this scenario, Sergey (who likes to search for stuff) is performing a search on the internet:
 
 ```Gherkin
@@ -34,6 +34,19 @@ Feature: Login ımdb
     Given User launch browser and open the main page
     When User logged in IMDB
     Then User logged in successfully
+```
+
+## The second scenario
+Both variations of the sample project uses the sample Cucumber scenario. In this scenario, Sergey (who likes to search for stuff) is performing a search on the internet:
+
+```Gherkin
+Feature: IMDB Top 250 Films
+ 
+  Scenario: Get IMDB Top 250 Films
+    Given User open IMDB main Page
+    And User click on Top Film link
+    Then User should see IMDB Top films
+    And User get the list of films on CSV file
 ```
 
 ### The Screenplay implementation
