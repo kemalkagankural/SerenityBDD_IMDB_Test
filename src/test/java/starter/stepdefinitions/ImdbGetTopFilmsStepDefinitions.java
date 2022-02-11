@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 import starter.navigation.GetFilmList;
-import starter.navigation.GetTopFilms;
+import starter.navigation.GoTopFilms;
 import starter.navigation.NavigateTo;
 import starter.user_interface.imdbFilmPageElement;
 
@@ -27,7 +27,7 @@ public class ImdbGetTopFilmsStepDefinitions {
     }
     @Given("User click on Top Film link")
     public void user_click_on_top_film_link() {
-        actor.attemptsTo(GetTopFilms.getTopFilms());
+        actor.attemptsTo(GoTopFilms.getTopFilms());
     }
 
     @Then("User should see IMDB Top films")

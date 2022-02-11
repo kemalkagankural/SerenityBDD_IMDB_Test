@@ -11,7 +11,7 @@ import starter.user_interface.imdbHomePageElement;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 
-public class GetTopFilms implements Task {
+public class GoTopFilms implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -22,6 +22,6 @@ public class GetTopFilms implements Task {
                 Click.on(imdbHomePageElement.TOPFILM_SECTON)
         );
     }
-    public static GetTopFilms getTopFilms() {return instrumented(GetTopFilms.class);
+    public static GoTopFilms getTopFilms() {return instrumented(GoTopFilms.class);
     }
 }

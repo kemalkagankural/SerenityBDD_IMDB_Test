@@ -49,6 +49,19 @@ Feature: IMDB Top 250 Films
     And User get the list of films on CSV file
 ```
 
+## The third scenario
+Both variations of the sample project uses the sample Cucumber scenario. In this scenario, Sergey (who likes to search for stuff) is performing a search on the internet:
+
+```Gherkin
+Feature: Search film
+ 
+  
+  Scenario: Searching film
+    Given user launch browser and open the ımdb main page
+    When user search  a film
+    Then user should see the film review
+```
+
 ### The Screenplay implementation
 The sample code in the master branch uses the Screenplay pattern. The Screenplay pattern describes tests in terms of actors and the tasks they perform. Tasks are represented as objects performed by an actor, rather than methods. This makes them more flexible and composable, at the cost of being a bit more wordy. Here is an example:
 ```java
